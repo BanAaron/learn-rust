@@ -1,45 +1,77 @@
 use std::io;
 
 fn main() {
-    // we will store the user input in `input`
-    let mut input: String = String::new();
+    // intro text
+    println!("Welcome to the Rust quick reminder cheatsheet");
+    println!("Press `Enter` to proceed in each step");
 
-    // prompt for a number
-    println!("Enter a number");
-
-    // capture the input
-    io::stdin().read_line(&mut input).expect("Invalid input");
-
-    // cast to a i32
-    let input_number: i32 = input.trim().parse().expect("Not a number");
-
-    // call fizz_buzz function using the converted user input
-    println!("{:?}", fizz_buzz(input_number));
+    // capture user input to pause between steps
+    capture_user_input();
+    scalars();
+    capture_user_input();
+    compounds();
+    capture_user_input();
 }
 
-fn fizz_buzz(number: i32) -> Vec<String> {
-    let mut answer: Vec<String> = Vec::new();
+fn capture_user_input() {
+    let mut user_input: String = String::new();
+    io::stdin()
+        .read_line(&mut user_input)
+        .expect("Error capturing string");
+}
 
-    // for x in range(number + 1)
-    for x in 1..=number {
-        // init a mutable result variable as a new string
-        let mut result: String = String::new();
+fn scalars() {
+    // scalars represents single values
+    println!("Rust has the following scalar values.");
 
-        // check our conditions
-        if x % 3 == 0 {
-            result = result + "Fizz";
-        }
-        if x % 5 == 0 {
-            result = result + "Buzz";
-        }
+    // integers
+    let integer_i32: i32 = -5; // can be signed (can be negative)
+    let integer_u32: u32 = 5; // or unsigned (cannot be negative)
+    println!("Integers! Signed or unsigned");
+    println!("- integer_i32 = {integer_i32}");
+    println!("- integer_u32 = {integer_u32}");
 
-        // check if we have any results
-        if result.len() > 0 {
-            answer.push(result);
-        } else {
-            let result = x.to_string();
-            answer.push(result);
-        }
-    }
-    return answer;
+    // floating point types
+    let float_f64: f64 = 5.55;
+    let float_f32: f32 = 5.5;
+    println!("Floats! 64 or 32 bit");
+    println!("- float_f64 = {float_f64}");
+    println!("- float_f32 = {float_f32}");
+
+    // boolean 👻
+    let bool_true: bool = true;
+    let bool_false: bool = false;
+    println!("Boolens!");
+    println!("- boolean true = {bool_true}");
+    println!("- boolean false = {bool_false:}");
+
+    // char
+    let a: char = 'a'; // must be declared with single quotes
+    let jing: char = '静';
+    let cat: char = '😺';
+    println!("Chars!");
+    println!("- a = {a}");
+    println!("- jing = {jing}");
+    println!("- cat = {cat}");
+}
+
+fn compounds() {
+    // compound types can group multiple values into one type
+    println!("Rust has the following compound types.");
+
+    // tuple
+    let tup: (char, f64, bool) = ('1', 1.5, true);
+    println!("Tuples! They can contain a mix of all types and are of a fixed length");
+    let (x, y, z) = tup;
+    println!("- tuple(char, f64, bool) = ({x}, {y}, {z})");
+
+    // lists
+    // unlike other languages lists have a fixed length
+    let _string_list: [&str; 3] = ["Aaron", "Chris", "Drew"];
+    let _i32_list: [i32; 3] = [1, 2, 3];
+    let _bool_list: [bool; 3] = [true, true, false];
+    println!("Lists! They can only contain values of the same type.");
+    println!("- string list = [\"Aaron\", \"Chris\", \"Drew\"]");
+    println!("- i32 list = [1, 2, 3]");
+    println!("- bool list = [true, true, false]");
 }
