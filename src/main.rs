@@ -11,6 +11,8 @@ fn main() {
     capture_user_input();
     compounds();
     capture_user_input();
+    functions();
+    capture_user_input();
 }
 
 fn capture_user_input() {
@@ -74,4 +76,17 @@ fn compounds() {
     println!("- string list = [\"Aaron\", \"Chris\", \"Drew\"]");
     println!("- i32 list = [1, 2, 3]");
     println!("- bool list = [true, true, false]");
+}
+
+fn functions() {
+    println!("Functions are declared like this:");
+    println!("fn function(params: type) {{}}");
+    println!("return type can be defined with `-> type`");
+
+    // in this example our function takes length as a param
+    fn convert_to_mm(length: f64) {
+        let length: f64 = &length * 100.0;
+        println!("{length}mm");
+    }
+    convert_to_mm(1.5);
 }

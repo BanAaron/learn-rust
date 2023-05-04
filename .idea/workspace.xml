@@ -7,7 +7,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="522ee162-7483-461d-b0f4-d1eef19a2ab9" name="Changes" comment="1️⃣ first commit">
+    <list default="true" id="522ee162-7483-461d-b0f4-d1eef19a2ab9" name="Changes" comment="⚒️ first working example">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
@@ -49,6 +49,11 @@
     "ignore.virus.scanning.warn.message": "true",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Rust"
+    ]
   }
 }]]></component>
   <component name="RustProjectSettings">
@@ -65,10 +70,19 @@
       <option name="presentableId" value="Default" />
       <updated>1683068366185</updated>
     </task>
+    <task id="LOCAL-00001" summary="⚒️ first working example">
+      <created>1683227606084</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683227606084</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1️⃣ first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1️⃣ first commit" />
+    <MESSAGE value="⚒️ first working example" />
+    <option name="LAST_COMMIT_MESSAGE" value="⚒️ first working example" />
   </component>
 </project>
